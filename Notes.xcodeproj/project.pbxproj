@@ -13,6 +13,9 @@
 		8437196E22C79A32000051AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8437196D22C79A32000051AB /* Assets.xcassets */; };
 		8437197122C79A33000051AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8437196F22C79A33000051AB /* LaunchScreen.storyboard */; };
 		8437197C22C79A33000051AB /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437197B22C79A33000051AB /* NotesTests.swift */; };
+		84CC3F1522C8C62B00D73BFC /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC3F1422C8C62B00D73BFC /* Note.swift */; };
+		84CC3F1722C8C65300D73BFC /* NoteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC3F1622C8C65300D73BFC /* NoteExtension.swift */; };
+		84CC3F1922C8C65B00D73BFC /* FileNotebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC3F1822C8C65B00D73BFC /* FileNotebook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		8437197722C79A33000051AB /* NotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8437197B22C79A33000051AB /* NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTests.swift; sourceTree = "<group>"; };
 		8437197D22C79A33000051AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CC3F1422C8C62B00D73BFC /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		84CC3F1622C8C65300D73BFC /* NoteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteExtension.swift; sourceTree = "<group>"; };
+		84CC3F1822C8C65B00D73BFC /* FileNotebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileNotebook.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 				8437196522C79A2F000051AB /* Notes */,
 				8437197A22C79A33000051AB /* NotesTests */,
 				8437196422C79A2F000051AB /* Products */,
+				8437196A22C79A30000051AB /* Main.storyboard */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +84,9 @@
 		8437196522C79A2F000051AB /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				8456DE4C22C8BBB400CCEAA4 /* Model */,
 				8437196622C79A2F000051AB /* AppDelegate.swift */,
 				8437196822C79A2F000051AB /* ViewController.swift */,
-				8437196A22C79A30000051AB /* Main.storyboard */,
 				8437196D22C79A32000051AB /* Assets.xcassets */,
 				8437196F22C79A33000051AB /* LaunchScreen.storyboard */,
 				8437197222C79A33000051AB /* Info.plist */,
@@ -94,6 +101,16 @@
 				8437197D22C79A33000051AB /* Info.plist */,
 			);
 			path = NotesTests;
+			sourceTree = "<group>";
+		};
+		8456DE4C22C8BBB400CCEAA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84CC3F1822C8C65B00D73BFC /* FileNotebook.swift */,
+				84CC3F1622C8C65300D73BFC /* NoteExtension.swift */,
+				84CC3F1422C8C62B00D73BFC /* Note.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CC3F1922C8C65B00D73BFC /* FileNotebook.swift in Sources */,
 				8437196922C79A2F000051AB /* ViewController.swift in Sources */,
+				84CC3F1722C8C65300D73BFC /* NoteExtension.swift in Sources */,
 				8437196722C79A2F000051AB /* AppDelegate.swift in Sources */,
+				84CC3F1522C8C62B00D73BFC /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.com.Notes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -388,7 +408,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.com.Notes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
