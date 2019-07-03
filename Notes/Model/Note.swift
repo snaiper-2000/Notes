@@ -22,3 +22,5 @@ struct Note {
         self.selfDestructionDate = selfDestructionDate
     }
 }
+
+

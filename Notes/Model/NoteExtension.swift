@@ -25,7 +25,7 @@ extension Note {
                 "title": title,
                 "content": content,
                 "color": (color == .white ? nil : convertUIToString(color: color)) as Any,
-                "importance": importance,
+                "importance": (importance == .normal) as Any,
                 "selfDestructionDate": selfDestructionDate?.timeIntervalSince1970 as Any]
     }
 }

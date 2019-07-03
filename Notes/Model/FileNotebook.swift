@@ -20,7 +20,7 @@ class FileNotebook {
     
     public func add(_ note: Note) {
 		var checkOnRepeat: Bool = false
-		for (key, value) in notes {	
+		for (_, value) in notes {	
 			guard value.uid == note.uid else {
 				checkOnRepeat = true
                 break
