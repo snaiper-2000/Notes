@@ -1,0 +1,9 @@
+
+Дополнительная конфигурация сборки: MySheme.
+
+Данная конфигурация создана для realese. 
+
+
+1. Указан Preprocessor Macros: ADHOC=1.
+2. Настроена build scheme.
+3. Multiple values - iOS Distribution.
