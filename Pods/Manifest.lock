@@ -1,0 +1,22 @@
+PODS:
+  - CocoaLumberjack/Core (3.5.3)
+  - CocoaLumberjack/Swift (3.5.3):
+    - CocoaLumberjack/Core
+  - CorePlot (2.2)
+
+DEPENDENCIES:
+  - CocoaLumberjack/Swift
+  - CorePlot (= 2.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CocoaLumberjack
+    - CorePlot
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
+  CorePlot: cbe0c6e14220705e32e06a89c7d6a5a908b7d7d8
+
+PODFILE CHECKSUM: df605590fbe89fb459f11b0c8c5e32e0940011d7
+
+COCOAPODS: 1.7.3

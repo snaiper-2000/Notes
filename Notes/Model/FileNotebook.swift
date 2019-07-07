@@ -1,4 +1,5 @@
 import Foundation
+import CocoaLumberjack
 
 class FileNotebook {
     private(set) var notes: [String: Note] = [:]
@@ -19,6 +20,7 @@ class FileNotebook {
     }
     
     public func add(_ note: Note) {
+        DDLogInfo("Use func add")
 		var checkOnRepeat: Bool = false
 		for (_, value) in notes {	
 			guard value.uid == note.uid else {
@@ -36,14 +38,18 @@ class FileNotebook {
     }
     
     public func saveToFile() {
-		
-        guard let data = try? JSONSerialization.data(withJSONObject: notesJson, options: []) else { fatalError("Eror JSON") }
+		DDLogInfo("Use func saveToFile")
+        guard let data = try? JSONSerialization.data(withJSONObject: notesJson, options: []) else {
+            DDLogError("Eror JSON")
+            fatalError("Eror JSON") }
         FileManager.default.createFile(atPath: filepath, contents: data)
     }
     
     public func loadFromFile() {
         guard let data = FileManager.default.contents(atPath: filepath) else { return }
-        guard let jsonArray = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] else { fatalError("Error JSON") }
+        guard let jsonArray = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] else {
+            DDLogError("Eror JSON")
+            fatalError("Error JSON") }
         
         notes.removeAll()
         

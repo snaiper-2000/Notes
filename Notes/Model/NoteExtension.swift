@@ -1,7 +1,9 @@
 import UIKit
+import CocoaLumberjack
 
 extension Note {
     static func parse(json: [String: Any]) -> Note? {
+        DDLogInfo("Start parse of json")
         guard let uid = json["uid"] as? String,
             let title = json["title"] as? String,
             let content = json["content"] as? String
@@ -21,6 +23,7 @@ extension Note {
     }
     
     var json: [String: Any] {
+        DDLogInfo("Start create of json")
         return ["uid": uid,
                 "title": title,
                 "content": content,
@@ -31,6 +34,7 @@ extension Note {
 }
 
 func convertStringToUI(str: String) -> UIColor {
+    DDLogInfo("Use func convertStringToUI")
     var color: UIColor
     switch str {
     case "white": color =  UIColor.white
@@ -44,6 +48,7 @@ func convertStringToUI(str: String) -> UIColor {
 }
 
 func convertUIToString(color: UIColor) -> String {
+    DDLogInfo("Use func convertUIToString")
     var str: String
     switch color {
     case UIColor.white: str =  "white"
